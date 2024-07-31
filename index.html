@@ -14,6 +14,7 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
+      // componente em função
       function Button() {
         const [total, setTotal] = React.useState(0);
         return (
@@ -21,12 +22,63 @@
         );
       }
 
+      // componente em arrow function
+      const Button2 = () => {
+        return <button>Botão 2</button>;
+      };
+
+      const MainNav = () => {
+        return (
+          <nav>
+            <a href="#">Link 1</a>
+            <Button />
+          </nav>
+        );
+      };
+
+      const Produtos = () => {
+        const produto1 = "Camisa";
+        const produto2 = "Bermuda";
+
+        function handleClick(event) {
+          console.log("Comprou " + event.target.innerText);
+        }
+
+        return (
+          <div>
+            <button onClick={handleClick}>
+              {produto1} - R$ {Math.floor(Math.random() * 100).toFixed(2)}
+            </button>
+            <button onClick={handleClick}>
+              {produto2} - R$ {Math.floor(Math.random() * 100).toFixed(2)}
+            </button>
+          </div>
+        );
+      };
+
+      const Comprar = () => {
+        const [count, setCount] = React.useState(5)
+
+        function handleClick(){
+          setCount(count + 1)
+        }
+        
+        return <div>
+        <button onClick={handleClick}>Comprar: {count}</button>
+        <p>Total: {count}</p>  
+        <p>Preço: {count * 250}</p>  
+        </div>
+      }
+
       function App() {
         return (
           <div>
             <h1>App React</h1>
+            <MainNav />
             <Button />
-            <Button />
+            <Button2 />
+            <Produtos />
+            <Comprar/>
           </div>
         );
       }

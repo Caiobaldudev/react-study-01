@@ -4,5 +4,7 @@ import App from "./App.jsx";
 import Exercicio from "./Exercicio.jsx";
 import Exerciciotwo from "./Exerciciotwo.jsx";
 import ClickEvents from "./Events.jsx";
+import Components from "./Components.jsx";
 
-ReactDOM.createRoot(document.getElementById("root")).render(<ClickEvents/>);
+
+ReactDOM.createRoot(document.getElementById("root")).render(<Components/>);

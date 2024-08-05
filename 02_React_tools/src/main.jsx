@@ -3,5 +3,6 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import Exercicio from "./Exercicio.jsx";
 import Exerciciotwo from "./Exerciciotwo.jsx";
+import ClickEvents from "./Events.jsx";
 
-ReactDOM.createRoot(document.getElementById("root")).render(<Exerciciotwo />);
+ReactDOM.createRoot(document.getElementById("root")).render(<ClickEvents/>);
